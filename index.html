@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>Pong — Arcade Classic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Pong home"><span class="brand-mark">▰</span> PONG</a>
+      <span class="status"><span class="status-dot"></span> ARCADE MODE</span>
+    </header>
+
+    <section class="game-card" aria-label="Pong game">
+      <div class="game-heading">
+        <div>
+          <p class="eyebrow">THE CLASSIC, REIMAGINED</p>
+          <h1>Ready to rally?</h1>
+        </div>
+        <button id="pause-button" class="icon-button" type="button" aria-label="Pause game" title="Pause game">Ⅱ</button>
+      </div>
+
+      <div class="scoreboard" aria-live="polite">
+        <div class="score-side"><span class="player-label">YOU</span><strong id="player-score">0</strong></div>
+        <span class="score-divider">:</span>
+        <div class="score-side"><span class="player-label">CPU</span><strong id="cpu-score">0</strong></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="800" height="480" aria-label="Pong court. Move your paddle with your mouse or up and down arrow keys." role="img"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-content">
+            <span class="overlay-icon">▰</span>
+            <h2 id="overlay-title">Your serve</h2>
+            <p id="overlay-copy">First to 5 points wins the match.</p>
+            <button id="start-button" class="primary-button" type="button">START GAME <span>→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="game-footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> MOVE</span>
+        <span class="footer-dot">·</span>
+        <span>OR MOVE YOUR MOUSE</span>
+        <span class="footer-spacer"></span>
+        <button id="reset-button" class="text-button" type="button">RESET MATCH <span>↻</span></button>
+      </footer>
+    </section>
+    <p class="page-note">A little friendly competition never hurt. <span>Good luck out there.</span></p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
